@@ -124,7 +124,7 @@ public final class PhysicsFactory {
 
 		boxPoly.dispose();
 
-		boxBody.setTransform(boxBody.getWorldCenter(), MathUtils.degToRad(pRotation));
+		boxBody.setTransform(boxBody.getWorldCenter(), MathUtils.degToRad(-pRotation));
 
 		return boxBody;
 	}
@@ -160,7 +160,7 @@ public final class PhysicsFactory {
 		circleBodyDef.position.x = pCenterX / pPixelToMeterRatio;
 		circleBodyDef.position.y = pCenterY / pPixelToMeterRatio;
 
-		circleBodyDef.angle = MathUtils.degToRad(pRotation);
+		circleBodyDef.angle = MathUtils.degToRad(-pRotation);
 
 		final Body circleBody = pPhysicsWorld.createBody(circleBodyDef);
 
